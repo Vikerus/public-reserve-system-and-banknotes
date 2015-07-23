@@ -1,0 +1,105 @@
+/*********** Theme Styles ***********/
+.webaccordion  {
+
+	border-right:1px solid #CCCCCC;
+}
+
+.webaccordion>ul>li>a {
+	-moz-box-shadow:inset 1px 0px 0px 0px #787178;
+	-webkit-box-shadow:inset 1px 0px 0px 0px #787178;
+	box-shadow:inset 1px 0px 0px 0px #787178;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6b666b, endColorstr=#575257);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6b666b), color-stop(1, #575257) );
+	background: -moz-linear-gradient( center top, #6b666b 5%, #575257 100%);
+	background-color:#6b666b;
+	border-style:solid;
+	border-color:#423d42;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:-1px -1px 0px #000000;
+}
+
+.webaccordion>ul>li>a:hover{
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b666b', endColorstr='#333033');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6b666b), color-stop(1, #333033) );
+	background:-moz-linear-gradient( center top, #6b666b 5%, #333033 100% );
+}
+
+.webaccordion>ul>li>div {
+	background-color:#ededed;
+	border-style:solid;
+	border-color:#ccc;
+}
+
+/******** Theme Structure *********/
+.webaccordion>ul>li>div {
+	border-width:1px 0;
+	height:55px;
+	width:676px;
+}
+
+.webaccordion>ul>li>a {
+	border-width:0 1px 0 0;
+	width:310px;
+}
+
+ul.webaccordion-ie>li>a >span { /* IE only */
+	margin-left:12px;
+	/* This value is  necessary for centering rotated texts in Internet Explorer. */
+}
+
+.webaccordion  {	
+	width:inherit;
+	/* 	This value refers to the total width of visible components
+		width = accordion>ul>li>div ( width + paddingRight + paddingLeft )  
+			+ accordion>ul>li>a ( number of accordions x ( width + borderRrightWidth ) )  
+		width = ( 580px + 10px + 10px ) + ( 4 x ( 40px +1px ) )
+		width = 764px
+	*/
+}
+
+.webaccordion, .webaccordion>ul>li>a  {	
+	height: 34px;
+    margin-bottom: -4px !important;
+	/* 	This value refers to the total height of visible area
+		height = accordion>ul>li>div ( height + paddingTop + paddingBottom + borderTopWidth + borderBottomWidth ) 
+		width = ( 200px + 10px + 10px + 1px +1px )
+		width = 222px
+	*/
+}
+
+.webaccordion>ul>li {
+	margin-right:-100%; 
+	/* 	This value refers to the negative of total width of content <div>
+		margin-right = accordion>ul>li>div (width + padding-right + padding-left)
+		margin-right = 580px + 10px + 10px 
+		margin-right = 600px
+	*/
+	max-width:687px;
+	width:100%;
+	/* 	width = .accordion>ul>li>div (width + padding-right + padding-left) 
+				+ .accordion>ul>li>a ( width + borderRrightWidth )
+		width = 580px + 10px + 10px + 40 + 1
+		width = 641px
+	*/
+	
+	/* Transition Effect */
+	transition: margin-right 0.6s ease 0.2s;
+    -moz-transition: margin-right 0.6s ease 0.2s;
+    -webkit-transition: margin-right 0.6s ease 0.2s;
+    -o-transition: margin-right 0.6s ease 0.2s;
+}
+
+/*******  Do not change folllowing properties  **********/
+.webaccordion {overflow:hidden;}
+.webaccordion>ul {margin:0;padding:0;list-style:none;width:9999em;}
+.webaccordion>ul>li {float:left;overflow:hidden;}
+.webaccordion>ul>li>a {float:left;margin:0;position:relative;z-index:1;-moz-outline-style:none;outline:none;}
+.webaccordion>ul>li>a>span{ /* Text Rotation for all browsers */
+	display:block;position:absolute;white-space:nowrap;
+}
+ul.webaccordion-ie>li>a>span {cursor:pointer;width:auto;} /* IE only */
+.webaccordion>ul>li>div {float:left;overflow-y:auto;overflow-x:hidden;}
+.webaccordion>ul>li:hover {margin-right:0px;}
+ul.webaccordion-ie>li:hover {margin-right:0px;} /* IE only */

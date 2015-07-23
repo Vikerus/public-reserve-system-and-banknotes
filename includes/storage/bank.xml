@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vault>
+  <bank>
+    <itemid lang="en">point_gd</itemid>
+    <itemname>Points</itemname>
+    <costpoints>-</costpoints>
+    <costgold>20.00</costgold>
+  </bank>
+  <bank>
+    <itemid lang="en">gold_pt</itemid>
+    <itemname>Gold</itemname>
+    <costpoints>1</costpoints>
+    <costgold>-</costgold>
+  </bank>
+</vault> 

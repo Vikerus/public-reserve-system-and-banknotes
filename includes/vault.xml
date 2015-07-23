@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vault>
+  <item>
+    <itemid lang="en">member_001</itemid>
+	<type>membership</type>
+    <itemname>Silver Membership - 1oz total per Month</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>16000.00</costreserves>
+    <command>sm 16g-30days</command>
+    <btc>.4</btc>
+  </item>
+  <item>
+    <itemid lang="en">member_002</itemid>
+	<type>membership</type>
+    <itemname>Gold Membership - 1oz+8g total per Month</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>24000.00</costreserves>
+    <command>sm 24g-30days</command>
+    <btc>.6</btc>
+  </item>
+  <item>
+    <itemid lang="en">member_003</itemid>
+	<type>membership</type>
+    <itemname>Emerald Membership - 2oz total per Month</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>34000.00</costreserves>
+    <command>sm 32g-30days</command>
+    <btc>.8</btc>
+  </item>
+  <item>
+    <itemid lang="en">member_004</itemid>
+	<type>membership</type>
+    <itemname>Diamond Membership - 2oz+8g total per Month</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>42000.00</costreserves>
+    <command>sm 42g-30days</command>
+    <btc>1.0</btc>
+  </item>
+  <item>
+    <itemid lang="en">member_005</itemid>
+	<type>membership</type>
+    <itemname>Green Diamond Membership - 3oz total per Month</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>58000.00</costreserves>
+    <command>sm 32g-30days</command>
+    <btc>1.2</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_001</itemid>
+	<type>flower</type>
+    <itemname>First Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>700.00</costreserves>
+    <command>fs 1g</command>
+    <btc>0.019</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_002</itemid>
+	<type>flower</type>
+    <itemname>Second Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>900.00</costreserves>
+    <command>ss 1g</command>
+    <btc>0.025</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_003</itemid>
+	<type>flower</type>
+    <itemname>Third Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>1000.00</costreserves>
+    <command>ts 1g</command>
+    <btc>0.03</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_004</itemid>
+	<type>flower</type>
+    <itemname>Top Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>1100.00</costreserves>
+    <command>tts 1g</command>
+    <btc>0.035</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_005</itemid>
+	<type>flower</type>
+    <itemname>Reserve Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>1200.00</costreserves>
+    <command>rs 1g</command>
+    <btc>0.04</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_006</itemid>
+	<type>flower</type>
+    <itemname>Private Reserve Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>1500.00</costreserves>
+    <command>prs 1g</command>
+    <btc>0.05</btc>
+  </item>
+  <item>
+    <itemid lang="en">oil_001</itemid>
+	<type>extractions</type>
+    <itemname>THC Fine - .5g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>700.00</costreserves>
+    <command>oef .5g</command>
+    <btc>0.019</btc>
+  </item>
+  <item>
+    <itemid lang="en">oil_002</itemid>
+	<type>extractions</type>
+    <itemname>THC Ultra Fine - .5g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>900.00</costreserves>
+    <command>oeu .5g</command>
+    <btc>0.025</btc>
+  </item>
+  <item>
+    <itemid lang="en">ext_001</itemid>
+	<type>extractions</type>
+    <itemname>CBD Fine - .5g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>700.00</costreserves>
+    <command>oef .5g</command>
+    <btc>0.019</btc>
+  </item>
+  <item>
+    <itemid lang="en">ext_002</itemid>
+	<type>extractions</type>
+    <itemname>CBD Ultra Fine - .5g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>900.00</costreserves>
+    <command>oeu .5g</command>
+    <btc>0.025</btc>
+  </item>
+</vault> 

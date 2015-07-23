@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vault>
+  <item>
+    <itemid lang="en">oil_001</itemid>
+	<type>extractions</type>
+    <itemname>THC Fine - .5g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>700.00</costreserves>
+    <command>oef .5g</command>
+    <btc>0.019</btc>
+  </item>
+  <item>
+    <itemid lang="en">oil_002</itemid>
+	<type>extractions</type>
+    <itemname>THC Ultra Fine - .5g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>900.00</costreserves>
+    <command>oeu .5g</command>
+    <btc>0.025</btc>
+  </item>
+</vault>

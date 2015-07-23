@@ -1,0 +1,691 @@
+/* ==== Google font ==== */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,700italic,800italic,400,700,800&subset=latin,latin-ext);
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 320;
+    color: #444;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-weight: 700;
+	text-shadow: 1px 1px #333333;
+}
+
+h3 {
+	font-weight: 700;
+
+}
+
+h4 {
+	font-weight: 800;
+	font-size: 20px;
+}
+
+p {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+
+a {
+    color: #7171E2;
+	font-weight: 700;
+    word-wrap: break-word;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #C93522;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #C93522;
+	font-weight: 700;
+}
+
+.alignleft {
+    text-align: left;
+}
+.alignright {
+    text-align: right;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.btn-theme  {
+  color: #fff;
+  background-color: #7572FF;
+  border-color: #7572FF;
+}
+.btn-theme:hover  {
+  color: #fff;
+  background-color: #444;
+  border-color: #444;
+}
+form.signup {
+	margin-top: 0px;
+}
+form.signup button.btn {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+form.signup input.form-control:focus {
+	border-color: #7572FF;
+}
+
+
+/* Nav */
+
+a.navbar-brand {
+	color: #fff !important;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+a.navbar-brand:hover {
+    color: #ddd !important;
+}
+
+/* Header */
+
+#header {	
+background: url("../img/bg-header.jpg") no-repeat scroll transparent;
+margin-top: 0px;
+padding-top: 0px;
+min-height: 100%;
+width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+#header h1 {
+	margin-top: 45px;
+	margin-bottom: 12px;
+	color: #fff;
+	font-size: 47px;
+	font-weight: 900;
+	letter-spacing: -1px;
+}
+
+h2.subtitle {
+	color: #fff;
+	font-size: 20px;
+}
+
+/* slide */
+.carousel-indicators {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -50%;
+  text-align: center;
+  list-style: none;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #b7cb1b;
+}
+
+/* footer */
+#footer {
+	background: #3D3D3D;
+	padding: 20px 0 5px;
+	  background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+  background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+}
+
+p.copyright {
+	color: #fff;
+	text-align: center;
+}
+.promo {
+  background: #333;
+  color: #fff;
+}
+.promo .title {
+  font-size: 98px;
+  color: #607026;
+  margin-top: 0;
+}
+.promo .title .highlight {
+  color: #dd7c4f;
+}
+.promo .intro {
+  font-size: 28px;
+  max-width: 680px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.promo .btns .btn {
+  margin-right: 15px;
+  font-size: 18px;
+  padding: 8px 30px;
+}
+.promo .meta {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #809633;
+}
+.promo .meta li {
+  margin-right: 15px;
+}
+.promo .meta a {
+  color: #809633;
+}
+.promo .meta a:hover {
+  color: #607026;
+}
+.promo .social-media {
+  background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+  background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  padding: 0 0;
+  margin: 0 auto;
+}
+.promo .social-media li {
+  margin-top: 6px;
+}
+.promo .social-media li.facebook-like {
+  margin-top: 0;
+  position: relative;
+  top: -5px;
+}
+::-moz-selection {
+    background: #68dff0;
+    color: #fff;
+}
+/*sidebar navigation*/
+
+#sidebar {
+    width: 210px;
+    height: 100%;
+    position: fixed;
+    background: #424a5d;
+}
+
+#sidebar h5 {
+	color: #f2f2f2;
+	font-weight: 700;
+}
+
+#sidebar ul li {
+    position: relative;
+}
+
+#sidebar .sub-menu > .sub li  {
+    padding-left: 32px;
+}
+
+#sidebar .sub-menu > .sub li:last-child {
+    padding-bottom: 10px;
+}
+
+/*LEFT NAVIGATION ICON*/
+.dcjq-icon {
+    height:17px;
+    width:17px;
+    display:inline-block;
+    background: url("../img/nav-expand.png") no-repeat top;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    position:absolute;
+    right:10px;
+    top:15px;
+}
+.active .dcjq-icon {
+    background: url("../img/nav-expand.png") no-repeat bottom;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+/*---*/
+
+.nav-collapse.collapse {
+    display: inline;
+}
+
+ul.sidebar-menu , ul.sidebar-menu li ul.sub{
+    margin: -2px 0 0;
+    padding: 0;
+}
+
+ul.sidebar-menu {
+    margin-top: 75px;
+}
+
+#sidebar > ul > li > ul.sub {
+    display: none;
+}
+
+#sidebar > ul > li.active > ul.sub, #sidebar > ul > li > ul.sub > li > a {
+    display: block;
+}
+
+ul.sidebar-menu li ul.sub li{
+    background: #424a5d;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+ul.sidebar-menu li ul.sub li:last-child{
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+}
+
+ul.sidebar-menu li ul.sub li a {
+    font-size: 12px;
+    padding: 6px 0;
+    line-height: 35px;
+    height: 35px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #aeb2b7;
+}
+
+ul.sidebar-menu li ul.sub li a:hover {
+	color: white;
+	background: transparent;
+}
+
+ul.sidebar-menu li ul.sub li.active a {
+    color: #68dff0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+ul.sidebar-menu li{
+    /*line-height: 20px !important;*/
+    margin-bottom: 5px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+ul.sidebar-menu li.sub-menu{
+    line-height: 15px;
+}
+
+ul.sidebar-menu li a span{
+    display: inline-block;
+}
+
+ul.sidebar-menu li a{
+    color: #aeb2b7;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0 15px 10px;
+    font-size: 12px;
+    outline: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+    background: #68dff0;
+    color: #fff;
+    display: block;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+ul.sidebar-menu li a i {
+    font-size: 15px;
+    padding-right: 6px;
+}
+
+ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
+    color: #fff;
+}
+
+ul.sidebar-menu li a.active i {
+    color: #fff;
+}
+
+
+.mail-info, .mail-info:hover {
+    margin: -3px 6px 0 0;
+    font-size: 11px;
+}
+.btn-round {
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+
+.accordion-heading .accordion-toggle {
+	display: block;
+	cursor: pointer;
+	border-top: 1px solid #F5F5F5;
+	padding: 5px 0px;
+	line-height: 28.75px;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	background-color: #ffffff;
+	outline: none !important;
+	text-decoration: none;
+}	
+/*--sidebar toggle---*/
+
+.sidebar-toggle-box {
+    float: left;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+
+.sidebar-toggle-box .fa-bars {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+.sidebar-closed > #sidebar > ul {
+    display: none;
+}
+
+.sidebar-closed #main-content {
+    margin-left: 0px;
+}
+
+.sidebar-closed #sidebar {
+    margin-left: -180px;
+}
+
+
+/* Dash Side */
+
+.ds {
+	background: #ffffff;
+	padding-top: 20px;
+}
+
+.ds h4 {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.ds h3 {
+	color: #ffffff;
+	font-size: 16px;
+	padding: 0 10px;
+	line-height: 60px;
+	height: 60px;
+	margin: 0;
+	background: #ff865c;
+	text-align: center;
+}
+
+.ds i {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.ds .desc {
+	border-bottom: 1px solid #eaeaea;
+	display: inline-block;
+	padding: 15px 0;
+	width: 100%;
+}
+
+.ds .desc:hover {
+	background: #f2f2f2;
+}
+
+.ds .thumb {
+	width: 30px;
+	margin: 0 10px 0 20px;
+	display: block;
+	float: left;
+}
+
+.ds .details {
+	width: 170px;
+	float: left;
+}
+
+.ds > .desc p {
+	font-size: 11px;
+}
+
+.ds p > muted {
+	font-size: 9px;
+	text-transform: uppercase;
+	font-style: italic;
+	color: #666666
+}
+
+.ds a {
+	color: #68dff0;
+}
+
+/* LINE ICONS CONFIGURATION */
+
+.mtbox {
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+
+.box1 {
+	padding: 15px;
+	text-align: center;
+	color: #989898;
+	border-bottom: 1px solid #989898;
+}
+
+.box1 span {
+	font-size: 50px;
+
+}
+
+.box1 h3 {
+	text-align: center;
+}
+
+.box0:hover .box1 {
+	border-bottom: 1px solid #ffffff;
+}
+
+.box0 p {
+	text-align: center;
+	font-size: 12px;
+	color: #f2f2f2;
+}
+
+.box0:hover p {
+	color: #ff865c;
+}
+
+.box0:hover {
+	background: #ffffff;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* begin styles for RSS Feed 
+
+     This is the most basic style to use for a list with no bullets */
+
+
+
+.rss-box {
+
+	 width: auto;
+
+	 background-color: #ffffff;
+padding: 4px 4px 4px;
+
+background-repeat: repeat-x;
+border-color: #DCDCDC;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1);
+border: 1px solid #E3E3E3;
+max-width:auto;
+height: auto;
+overflow: hidden;
+}
+
+
+
+.rss-title, rss-title a {
+
+	margin: 0px 0;
+	
+	font-weight:800;
+	
+	font-size:20px;
+
+	padding: 0;
+
+}
+
+
+
+.rss-items {
+
+       list-style:none;
+	   
+	   width:auto;
+
+       margin:0;
+
+       padding:0;
+
+}
+
+
+
+.rss-item  {
+
+  font-size: 11px;
+
+  margin-bottom: 1em;;
+
+}
+
+
+
+.rss-item a:link, .rss-item a:visited, .rss-item a:active {
+
+
+
+	}
+
+
+
+.rss-item a:hover { 
+
+
+
+	}
+
+	
+
+.rss-date {
+
+	font-size: xx-small;
+
+	} 
+/* buttons modeled from http://www.wellstyled.com/css-inline-buttons.html */
+
+.pod-play {
+   _width:12em;
+   margin: 0 0.2em; padding: 0.1em 0; _padding:0;
+   
+   white-space:nowrap;
+   text-decoration: none;
+   vertical-align:middle;
+   background: #fb6;
+   color: black;
+   }
+.pod-play em {
+   _width:1em; _cursor:hand;
+   font-style: normal;
+   margin:0; padding: 0.1em 0.5em;
+   background: white;
+   color: #222;
+   }
+.pod-play span {
+   _width:1em; _cursor:hand;
+   margin:0; padding: 0.1em 0.5em 0.1em 0.3em;
+   }
+.pod-play:hover {
+   background: #666;
+   color: white;
+   }
+.pod-play:hover em {
+   background: black;
+   color: white
+   }

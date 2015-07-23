@@ -1,0 +1,49 @@
+<IfModule mod_headers.c>
+    # LONGCACHE
+    <FilesMatch "\.(ico|js|swf)$">
+        Header set Cache-Control "max-age=604800, public"
+		Header append Vary: Accept-Encoding
+		Header unset ETag
+		FileETag None
+    </FilesMatch>
+    # PRIVATECACHE
+    <FilesMatch "\.(jpg|jpeg|png|gif|pdf)$">
+        Header set Cache-Control "max-age=604800, private, no-cache"
+		Header append Vary: Accept-Encoding
+    </FilesMatch>
+    # SHORTCACHE
+    <FilesMatch "\.(css)$">
+        Header set Cache-Control "max-age=166400, public, no-cache"
+		Header append Vary: Accept-Encoding
+		Header unset ETag
+		FileETag None
+    </FilesMatch>
+    # SHORTERPRIVATECACHE
+    <FilesMatch "\.(xml)$">
+        Header set Cache-Control "max-age=510, private, no-cache"
+		Header unset ETag
+		FileETag None
+    </FilesMatch>
+	# SHORTESTPRIVATECACHE
+    <FilesMatch "\.(html|cfg)$">
+        Header set Cache-Control "max-age=110, private, no-cache"
+		Header unset ETag
+		FileETag None
+    </FilesMatch>
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/html "access 12 seconds"
+ExpiresByType text/css "access 2 days"
+ExpiresByType text/x-javascript "access 3 months"
+ExpiresByType image/gif "access 2 weeks"
+ExpiresByType image/png "access 2 weeks"
+ExpiresByType image/jpg "access 2 weeks"
+ExpiresByType image/jpeg "access 2 weeks"
+ExpiresByType image/gif "access 2 weeks"
+ExpiresByType application/pdf "access 1 year"
+ExpiresByType application/x-shockwave-flash "access 1 year"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+# Do not remove this line, otherwise mod_rewrite rules will stop workingDirectoryIndex home.phpRewriteBase /public_html/admin/ admin.php

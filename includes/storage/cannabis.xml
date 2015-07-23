@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vault>
+  <item>
+    <itemid lang="en">flower_001</itemid>
+	<type>flower</type>
+    <itemname>First Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>700.00</costreserves>
+    <command>fs 1g</command>
+    <btc>0.019</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_002</itemid>
+	<type>flower</type>
+    <itemname>Second Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>900.00</costreserves>
+    <command>ss 1g</command>
+    <btc>0.025</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_003</itemid>
+	<type>flower</type>
+    <itemname>Third Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>1000.00</costreserves>
+    <command>ts 1g</command>
+    <btc>0.03</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_004</itemid>
+	<type>flower</type>
+    <itemname>Top Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>1100.00</costreserves>
+    <command>tts 1g</command>
+    <btc>0.035</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_005</itemid>
+	<type>flower</type>
+    <itemname>Reserve Shelf Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>1200.00</costreserves>
+    <command>rs 1g</command>
+    <btc>0.04</btc>
+  </item>
+  <item>
+    <itemid lang="en">flower_006</itemid>
+	<type>flower</type>
+    <itemname>Private Reserve Strain - 1g</itemname>
+    <costpoints>0</costpoints>
+    <costreserves>1500.00</costreserves>
+    <command>prs 1g</command>
+    <btc>0.05</btc>
+  </item>
+</vault>

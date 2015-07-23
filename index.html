@@ -1,0 +1,501 @@
+<?php
+ini_set("auto_detect_line_endings", true);
+include_once 'includes/functions.php';
+include_once 'db_connect.php';
+sec_session_start();
+
+?>
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="refresh" content="1020">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A first piece. The world needs change.">
+    <meta name="author" content="Vikerus">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <title>Can we reinvent an economy that serves people equally? (stop over changing for medicine.)</title>
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<script src="//justiscraft.com/assets/js/jquery.js"></script>
+		<script type="text/javascript" src="//justiscraft.com/js/function.js"></script>
+		<?php echo "<script> tolerance('". $_SESSION['tolerance'] ."');</script>"; ?>
+<script onload="showUser3();"  src="//justiscraft.com/assets/js/bootstrap.min.js"></script>
+<style type="text/css">
+#boxscroll {
+	 width: auto;
+	 background-color: #ffffff;
+padding: 0px;
+background-repeat: repeat-x;
+border-color: #DCDCDC;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1);
+border: 1px solid #E3E3E3;
+max-width:auto;
+overflow: auto;
+  margin-bottom:1px;
+}
+#boxscroll2 {
+	padding: 6px;
+	height: auto;
+	max-height: 300px;
+	width: 100%;
+	overflow: auto;
+}
+		#boxscroll4 {
+	max-height: 740px;
+	margin-top: -3px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	color: #006633;
+overflow-x: hidden;
+box-shadow: 0px 5px 2px 10px rgba(0, 0, 0, 0.15);
+overflow-y: auto;
+	}
+</style>
+<script>
+$(function () {
+  var nua = navigator.userAgent
+  var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
+  if (isAndroid) {
+    $('select.form-control').removeClass('form-control').css('width', '100%')
+  }
+})
+</script>
+<style>
+.panel-heading span {
+    margin-top: -20px;
+    font-size: 15px;
+}    
+</style>
+</head>
+<body onload="showUser5">
+<nav class="navbar navbar-trans navbar-fixed-top" role="navigation" style="height: 1px ! important; margin:0px; margin-right:4px;">
+  <div class="container" style="height: 1px ! important; width:auto !important; z-index:111110;">
+  	<button type="button" class="navbar-toggle pull-left glyphicon glyphicon-log-in" data-toggle="collapse" data-target="#navbar-collapsible" style="color:#4A9759; top:-5px;"></button>
+    <div title="Menu" alt="justiscraft gamers community starts here" class="navbar-header pull-right" style="height: 34px ! important;">
+	
+	          <a  title="Menu" alt="menu for justiscraft gaming"  href="#" style="margin:0px; color:#7171E2; font-weight:700;" class="navbar-btn btn btn-default btn-plus dropdown-toggle pull-right" data-toggle="dropdown"><i class="glyphicon glyphicon-home" style="color:#dd1111;"></i> Legend <small><i class="glyphicon glyphicon-chevron-down"></i></small></a>
+          <ul class="nav dropdown-menu pull-right" style="margin:0px;">
+              <li><a title="Gamers Dashboard" alt="visit the homepage of justiscraft.com" href="http://justiscraft.com/"><i class="glyphicon glyphicon-dashboard" style="color:#1111dd;"></i> Dashboard</a></li>
+			  <li><a title="Justiscraft Community Forum" alt="the justiscraft forum click to see" href="./forum"><i class="glyphicon glyphicon-list-alt" style="color:#ee1111;"></i> Forum</a></li>
+              <li><a title="GA Profile" alt="gamer accounts have profiles, visit yours" href="profile.html"><i class="glyphicon glyphicon-user" style="color:#0000aa;"></i> Profile</a></li>
+              <li class="nav-divider"></li>
+              <li><a title="User Control Panel for GA's" alt="control panel for users with gamer accounts" href="./ucp.php"><i class="glyphicon glyphicon-cog" style="color:#dd1111;"></i> UCP</a></li>
+			  <li><a title="Forum User Control Panel" alt="change your user settings on the forum" href="./forum/ucp.php"><i class="glyphicon glyphicon-cog" style="color:#dd1111;"></i> Forum UCP</a></li>
+			  <li><a title="Logout of JC" alt="logout of justiscraft community account" href="./includes/logout.php"><i class="glyphicon glyphicon-logout" style="color:#dd1111;"></i> Logout</a></li>
+          </ul>
+	                <div class="sidebar-toggle-box pull-right">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div></div></div></nav>
+<?php if (!empty($error_msg)){ echo $error_msg;} ?>
+<div id="header">
+		<div class="container-fluid" style="background-image:url('assets/img/bg-header.jpg'); height: 132px;">
+			<div class="row">
+				<div class="col-lg-6" style="margin-top:20px;">
+					<span class="form-inline" ><h2 title="Justiscraft logo" alt="pixelmon minecraft gmod cs:go and more to join and experince" class="subtitle" style="margin-top:-1px !important;"><a href="http://www.justiscraft.com/"><h1 style="margin-top:10px !important; margin-bottom:-15px !important; ">Public Reserves</h1></a>A Powerful tool for freedom.</h2></span>
+						     <div class="navbar-collapse collapse" id="navbar-collapsible" style="height: 34px ! important; border-top: 0px !important; box-shadow: none !important;">
+							 <a title="Login to Justiscraft Gamer Account" alt="sign in to your account" href="login.php"><button type="submit" style="float:left; display:inline;" action="login.php" class="btn btn-warning">Login</button></a>
+							 <a title="Register for a Justiscraft Gamer Account" alt="sign up for your account" href="register.php"><button type="submit" style="float:left; display:inline;" action="login.php" class="btn btn-success">Register</button></a>
+					</div></div></div></div></div>
+		   <div class="panel panel-default" style="z-index: 1000 ! important; position: relative; background-color: transparent ! important; border-color: transparent; margin-bottom: 0px; border: none !important;">
+				<div title="Navigation Bar" alt="gaming in a community with social, economic features and rewards" class="panel-heading" style="height:42px; margin-right: 0px; margin-left: 0px; border-width: 0px; border: none !important; background-image: linear-gradient(to bottom, #2D2D2D 0%, #121212 100%) !important;">
+					<h3 class="panel-title"></h3>
+						  <span class="pull-right"  style="top: 9px !important; color:#4A9759; margin-right:0px; font-size:16px; border-top-right-radius: 0px !important; border-top-left-radius: 0px !important; border-top:0px !important; border: 1px solid #CCC; border-radius: 4px; text-shadow: 0px 1px 0px #FFF; background-image: linear-gradient(to bottom, #FFF 0%, #E0E0E0 100%); background-repeat: repeat-x; margin-bottom: 8px; padding: 9px 10px; position: relative;"><a href="bitcoin:1Gc7N1qTa1uCzBa3j3q9GqMzCC1NG6iavK" title="Gift  Bitcoin" alt="needs funders"><i class="glyphicon glyphicon-gift"></a></i></span>
+				</div>
+<div class="modal fade" id="test_modal4">
+  <div class="modal-body">
+     <div class="container-fluid col-sm-12" style="padding-right: 0px; padding-left: 0px;">
+<div class="panel panel-default">
+<div class="panel-heading"><h3>How to use.</h3></div>
+<div class="panel panel-body">
+<div class="navbar navbar-default">
+  <div class="container">
+    <a class="navbar-brand" href="http://www.justiscraft.com">Public Reserves as personal credit</a>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://justiscraft.com">Home</a></li>
+    </ul>
+  </div></div>
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Reserve Accounts:</h1>
+    <p class="lead">Learn to use this system with confidence.</p>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <h4>Principles</h4>
+      <p>The economic function is to only move value.</p>
+      <p>Systems utilizing this function can create value.</p>
+	  <p>Conversion should be simple. Flexible.</p>
+      <p>Privacy isn't part of the design but a side effect of smart engineering.</p>
+      
+      <h4>Account and Reserves description;</h4>
+<p>An account is from the start nothing more then a membership with the site or business. It can have funds from the start or require a fee to open and deposit a starting amount. Members can create profiles to better inform the business about preferences in stock and trends. Profiles can be made public or private. But the policy should be plain to the user when signing up.</p>
+
+<p>A reserve account is nothing more then a number representing the value of what ever is accepted for it. In the real world. Money. A person can be taken through a gateway which will allow them to create a pin number and then "charge" their account with reserves at whatever conversion rate is wished. For example: $50 might buy 8000 reserves. This 8000 reserves can then be used to pay for a "gram of green plant matter hint* hint* lol." at 1000 reserves per gram.</p>
+
+<p>There are several ways to use this system; Public Listings, Selling House Inventory, and Physical Trades. There are certainly more ways to use this but currently that is what is programmed.</br>
+-Public Listings are trades put up by the public or possibly only trusted sources. These trades use only reserves as the tender.</br>
+-House Inventory could be anything a business has guaranteed stock of. Items can be sold for only reserves or any other number of virtual to tangible currencies. Reward/Loyalty points or credits is an example of a possible extra virtual currency which the business itself issues.</br>
+-Physical Trades allow an exchange of goods in the real world. This is possible thanks to banknotes. The banknote stores a finite amount of reserves to be used in a transaction. After the transaction, the seller then returns the banknote to its source bank and the funds are then deposited into their account.
+</p>
+    </div>
+    </div><hr></div>
+<div class="modal-footer pull-left" style="width: auto;">
+    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+  </div></div></div></div></div></div>
+</div>
+	<div alt="justiscraft site gaming active background" class="container-fluid panel default-panel" style="margin:0px; background-image: url('assets/img/grnbg.jpg');">
+ <div class="alert alert-success alert-dismissible" role="alert">
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="false">&times;</span></button>
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img title="Reserve Accounts" class="media-object" height="50px" width="50px" src="/assets/img/favicon.png" alt="account logo">
+    </a>
+  </div>
+  <div class="media-body">
+    <a title="Information on our Products" alt="understand how our membership system works and what reserves are" href="#"><h4 class="media-heading">Help Center!</h4> Accounts and more. Get answers here.</a>
+  </div></div></div>
+<div class="container-fluid">
+	<div class="row">
+  			<div style="margin: 0px 0px 10px;" class="col col-sm-3 scroll">
+			  <div class="clearfix"></div>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+      <ul class="nav navbar-nav inline">
+			  <ol class="breadcrumb pull-right">
+  <li class="active">Home</li>
+  <li><a title="Forum" alt="goto the forum" href="./forum">Forum</a></li>
+  <li><a title="Updates and Interest" alt="community update blog" href="#blog">Blog</a></li>
+</ol>
+	 </ul>
+  </div></nav>
+<div class="panel panel-default">
+<div class="panel-heading">The forum is our gathering place for information and chatter, many important reads and helpful tips:</div>
+<div class="table-responsive" style="width:auto;">
+<table class="table table-striped">
+  <tr>
+    <th><a title="Click here to Pre-Apply" alt="gym leaders for pixelmon" type="button" href="forum/#"><label class="input-group-addon"><i class="icon glyphicon glyphicon-file pull-left"></i> Applications</label></a></th>
+  </tr>
+    <tr>
+    <th><a title="Click here to read a review or two" alt="center for user reviews" href="forum/#"><label class="input-group-addon"><i class="icon glyphicon glyphicon-map-marker pull-left"></i> User Reviews</label></a></th>
+  </tr>
+    <tr>
+    <th><a title="Click here to Introduce Yourself" alt="introduced to the community" href="forum/#"><label class="input-group-addon"><i class="icon glyphicon glyphicon-bullhorn pull-left"></i> Introductions</label></a></th>
+  </tr>
+</table>
+  </div></div>
+			  <hr>
+              <div class="clearfix"></div>
+			  <iframe width="100%" height="280px" src="https://www.youtube.com/embed/GE2BkLqMef4" frameborder="0" allowfullscreen></iframe>
+              <a title="The Blog" alt="blog for related news reviews and updates" href="#blog"><img src="http://i.imgur.com/Xv8GNyG.png" class="img-responsive img-thumbnail pull-right">
+              <p alt="read more about community" style="color:gray;">The Blog hosts updates, interesting reads, vlog releases. Bored? Give it a read!</p></a>
+              <a style="margin-top:20px;" href="#blog" class="badge badge-default">blog</a>
+			  <div class="clearfix"></div>
+			  <hr>
+			  		<center><div style="margin-right: 0px; margin-left: 0px; margin-top: 0px; padding-bottom: 0px; width:100%;">
+<a title="Twitter" alt="community twitter feed" class="twitter-timeline"  href="https://twitter.com/#pagehere" data-widget-id="find this in twitter widget settings">Tweets by @yourtwitterhere</a>
+            
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div></center>
+</div>  
+      		<div style="margin-top:0px; margin-left:0px;" class="col col-sm-9">
+              <div class="panel"  style="margin-top:0px; margin-bottom:0px; margin-right:0px; background-color:transparent;" >
+              <div class="row"  style="margin-top:0px; margin-bottom:0px;">
+              	<div class="col col-sm-8" style=" padding-top:0px; margin-top:0px; padding-right: 0px; padding-left: 0px;">
+				<div id="boxscroll4">
+					  <div id="txtHint4" style="padding-left: 0px;">
+   Loading Articles... . . .  .    .     .               .
+  </div></div>
+ <div class="panel default-panel" style="padding:0px !important; border: 1px solid;">
+      <ul class="nav nav-tabs">
+        <li><a title="Links?" alt="sister site" href="#A" >Sister Site</a></li>
+        <li><a title="Another Link" alt="classifieds" href="#B" >Job Offerings</a></li>
+		<li><a title="Link 3" alt="link to charity project" href="#C" >Charity Project</a></li>
+		<li><a title="You get the idea" alt="link to sister site" href="#D">Sponcer Site</a></li>
+      </ul>
+</div></div>
+        <div class="col col-sm-4 panel panel-success" style="border: 1px solid; padding:0px;">
+			<div class="panel-heading panel-primary">
+				<h3 title="Show off Latest Anything" alt="new stock is new news" class="panel-title">Monthly Featured Stuff</h3>
+				</div>
+					<a alt="link to featured thing or site" href="#" class="figure"><iframe class="" src="https://google.com/" width="100%" height="240"></iframe></a> 
+					<center><h4 title="What is it?" alt="description of the thing" class="label label-primary">This is Google!</h4></center>
+				  <div class="panel default-panel" style="padding:0px !important;border: 1px solid;">
+
+          <div class="tab-pane" id="B1">
+            <h3 title="Gamers Community hosting Game Servers" alt="justiscraft community goals and philosophy">The '' community</h3>
+            <p title="About the group" alt="all welcome we are international and proud to serve a diverse group of people">
+            <li>The network is funded entirely by donations, thank you.</li>
+        </p>
+          </div></div><div><div>
+	<div class="panel panel-default" style="border-radius: unset; border: none !important;">
+<a class="pull-right" style="color: #333; margin:0px; padding:0px;">
+     <li class="dropdown dropdown-toggle btn btn-primary" style="width: 100%; color: #333; ">
+      <a href=".#" title="Submit Post" accesskey="x" class="dropdown-toggle" data-toggle="dropdown">
+       <span class="inner-text"> <h3 style="color:#f9f9f9;"> Leave a Comment</h3></span></a>
+       <div style="opacity: 1; position:relative !important; width:100%;" class="dropdown-menu " role="login">
+       <form method="post">
+           <div class="panel panel-heading text-center">
+		       <label for="userid">User ID :</label>
+           <input name="userid" id="userid" size="30" placeholder="Username" class="form-control" title="Username" type="text" required></div>
+           <div class="panel-body text-center">
+		   <label for="postid">Post :</label><br>
+           <textarea style="width:100%;" name="postid" id="postid" rows="4" col="50" placeholder="2000 Character Limit" class="inputbox autowidth add-border" title="body" type="text" required></textarea>
+           </div>
+           <div class="panel-footer button-container pull-right" style="width:100%;">           
+           <input type="button" value ="Post it!" onclick="PostData()" class="btn btn-default">
+           </div>
+       </form>
+       </div>
+     </li></a>
+<div  class="container-fluid" id="boxscroll2" style="margin: 0px;
+padding: 1px;">
+    <div class="panel-body" style="padding:0px; width:100%;" id="txtHint5">Reload the Page to see Comments</div>
+        </div></div>
+		<span><a href="#"></a></span>
+</div></div></div></div></div></div></div></div>
+<div class="row">
+  <div class="col-md-4 col-sm-6" style="margin-left:0px !important;margin-right:0px !important; padding-left: 0px !important; padding-right: 0px !important;">
+
+</div>
+  <div class="col-md-4 col-sm-6" style="margin-right:0px !important; margin-left:0px !important;  padding-left: 0px !important; padding-right: 0px !important;">
+ 
+</div>
+  <div class="col-md-4 col-sm-6" style="margin-left:0px !important; margin-right:0px !important; padding-left: 0px !important; padding-right: 0px !important;">
+
+</div></div></div>
+	<div title="Navigation Bar" alt="get around our site" class="panel-heading" style="height:42px; margin-right: 0px; margin-left: 0px; border-width: 0px; border: none !important; background-image: linear-gradient(to bottom, #2D2D2D 0%, #121212 100%) !important;">
+					<h3 class="panel-title"></h3>
+						  <span class="pull-right clickable" style="top: 9px !important; color:#4A9759; margin-right:0px; font-size:16px; border-top-right-radius: 0px !important; border-top-left-radius: 0px !important; border-top:0px !important; border: 1px solid #CCC; border-radius: 4px; text-shadow: 0px 1px 0px #FFF; background-image: linear-gradient(to bottom, #FFF 0%, #E0E0E0 100%); background-repeat: repeat-x; margin-bottom: 8px; padding: 9px 10px; position: relative;"><a href="#test_modal4" data-toggle="modal" title="Cool modal thing" alt="interaction is key"><i class="glyphicon glyphicon-info-sign"></i> What are Reserves Accounts?</a></span>
+
+				</div>
+<div class="container-fluid" style="height: auto !important; margin-right:4px; margin-left:4px; padding-right: 0px !important;
+padding-left: 0px !important; background-image:url('assets/img/bg-exchange.jpg');" >
+    <div class="col-sm-8" style="padding: 0px ! important;">
+    	<div class="panel panel-default" style="margin-bottom: 0px !important;">
+         	<div class="panel-heading"><b>Public Reserves</b> Exchange <i>:Beta</i><a title="Advanced Economy Functions" alt="login to use the justiscraft exchange central for trading and sending items or currency" href="/trade" type="button" class="btn-default" style="margin-top:0px;">Public Listing Options</a><a title="Advanced Economy Functions" alt="login to use the justiscraft exchange central for trading and sending items or currency" href="/rconsend" type="button" class="btn-default" style="margin-top:0px;">Transfer Options</a><a title="Advanced Economy Functions" alt="login to use the justiscraft exchange central for trading and sending items or currency" href="/bank" type="button" class="btn-default" style="margin-top:0px;">Banknote Options</a>
+</div>
+         	<div id="boxscroll" class="panel-body">
+			<div class="well form-inline" style="height:100%; margin-bottom:0px !important; margin-right:0px !important; margin-left:0px !important; padding-bottom:0px; padding-top:0px;">						
+			<div class="jumbotron" style="padding:0px;">
+  <div class="container">
+	<br>
+	    <div class="" style="margin:0px;">
+		<dl class="dl-horizontal">
+  <dt><form>
+<select name="users" onchange="showUser(this.value)">
+  <option value="">Select a Category:</option>
+  <option value="memberships">Membership Levels</option>
+  <option value="cannabis">Cannabis</option>
+  <option value="thc">THC Oils</option>
+  <option value="cbd">CBD Oils</option>
+  <option value="listings">Listings</option>
+  </select>
+</form></dt>
+<dd><form action=""> 
+Item Search: <input type="text" id="txt1" onkeyup="showHint(this.value)">
+</form>Suggestions: <span id="txtHint3"></span></dd>
+</dl></div>
+<form class="table-responsive" style="width:auto;" method="post" action="includes/tollman.php">
+  <table class="table table-striped">
+  <tr>
+    <th><label class="input-group-addon" for="exampleInputEmail3">Item Id</label></th>
+    <th><label class="input-group-addon" for="exampleInputEmail3">Amount</label></th>
+	<th><label class="input-group-addon" for="exampleInputEmail3">PIN</label></th>
+		<th><label class="input-group-addon" for="exampleInputEmail3">Pay Method</label></th>
+			<th><label class="input-group-addon" for="exampleInputEmail3">Checkout</label></th>
+  </tr>
+    <tr>
+    <td><input style="width:90px;" type="" name="itemid" id="exampleInputEmail3" placeholder="Item Id" required></td>
+    <td><input style="width:90px;"  type="" name="count"  id="exampleInputEmail3" placeholder="Amount" required></td>
+	<td><input style="width:90px;"  type="" name="pin"  id="exampleInputEmail3" placeholder="PIN" required></td>
+	<td>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="gold" name="method">
+    Gold
+  </label>
+</div>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="points" name="method">
+    Points
+  </label>
+</div>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="reserves" name="method">
+    Reserves
+  </label>
+</div>
+	</td>
+	<td> <button type="submit" class="btn btn-primary pull-left">Checkout</button></td>
+  </tr>
+  </table></div></form>
+</div></div>
+<div class="table-responsive" id="boxscroll" style="max-height:330px;">
+  <table id="txtHint" class="table table-bordered table-striped table-hover">
+      <tr>
+	<th>Item Id</th>
+	<th>Type</th>
+    <th>Name</th>
+    <th colspan="3">Cost in points <i>or</i> gold <i>or</i> reserves</th>
+  </tr>
+  <?php
+$xmla=simplexml_load_file("includes/vault.xml") or die("Error: Cannot create object");
+foreach($xmla->children() as $itemsz) {
+	echo "<tr>";
+	echo "<td>";
+    echo $itemsz->itemid . " ";
+	echo "</td><td>";
+    echo $itemsz->type . " ";
+	echo "</td><td>";
+    echo $itemsz->itemname . " ";
+	echo "</td><td>";
+    echo $itemsz->costpoints . " ";
+	echo "</td><td>";
+    echo $itemsz->costgold . "</td></tr>";
+}
+?> 
+  </table>
+</div></div></div></div>
+  <div style=" padding: 0px ! important;" class="col-sm-4">
+	<div class="sidebar-block panel panel-default" style="margin-bottom: 0px !important;">
+	  <div class="panel-heading">
+	   <center><h3 title="Your Inventory and Balance" alt="justiscraft web chest and inventory" style="margin: 0px ! important;"><a href="#"><?php echo $_SESSION['username']; ?></a>'s</h3> Chest </center><a title="Advanced Economy Functions" alt="login to use the reserves exchange central for trading and sending items or currency" href="ucp.php" type="button" class="btn-default" style="margin-top:0px;">Create a Pin</a>
+	  </div>
+	    <div id="boxscroll" class="panel-body" style="padding:0px !important; min-height:auto; max-height:350px !important; background:none !important;">
+<div class="table-responsive">
+  <form>
+  Enter pin to open chest: <input class="form-control" onchange="showUser2(this.value)" type="text" name="q" required>
+<span class="error"><?php  echo $nameErr;?></span>
+</form>
+  <div id="txtHint2"><b>Chest will open here.</b></div>
+</div></div></div></div></div></div>
+    <section id="promo" class="promo section offset-header" style="z-index: 1000; position: absolute; width:100%;">
+        <div class="social-media">
+            <div class="social-media-inner container text-center">
+                <ul class="list-inline">
+                    <li class="twitter-follow"><a href="https://twitter.com/justiscraft" class="twitter-follow-button" data-show-count="false">Follow Justiscraft</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </li><!--//twitter-follow-->
+                    <li class="twitter-tweet">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="Justiscraft" data-hashtags="tweet">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </li><!--//twitter-tweet-->
+				</ul>
+            </div></div>
+    </section><!--dev-->
+	        <div class="section" style="background-image: linear-gradient(to bottom, #F5F5F5 0%, #E8E8E8 100%);background-repeat: repeat-x; position:relative !important; z-index:100 !important;">
+	        <div class="container">
+	        	<div class="row">
+	        		<div class="col-md-3 col-sm-6">
+	        			<div class="service-wrapper">
+		        			<h3 style="margin-top:35px;"  title="Accounts for Better Living" alt="accounts let you use more of our features"><yournamehere> Accounts</h3>
+		        			<p title="Register for an Account" alt="register for a  account here on us.com">Signup with us and gain features like trading, buying, and transfering on the Reserves Exchange. Every account gets 10 Free points.<a href="register.php">  Sign-Up</a></p>
+	        			</div></div>
+	        		<div class="col-md-3 col-sm-6">
+	        			<div class="service-wrapper">
+		        			<h3 style="margin-top:35px;" title="Great Friends" alt="our servers are in protected datacenters">Our Building Network</h3>
+		        			<p title="Staffed Servers" alt="dedicated staff keep the servers running smoothly">Nothing worth doing is done overnight, follow along with us as we becomes a fully fledged network and community.</a></p>
+		        		</div></div>
+	        		<div class="col-md-3 col-sm-6">
+	        			<div class="service-wrapper">
+		        			<h3 style="margin-top:35px;"  title="Faster Connections" alt="low lag on our game servers">Low Latency Servers</h3>
+		        			<p title="Less Lag" alt="donate">We have invested in top quality metal for our dedicated server!</a></p>
+		        		</div></div>
+	        		<div class="col-md-3 col-sm-6">
+	        			<div class="service-wrapper">
+		        			<h3 style="margin-top:35px;"  title="Community of Gamers" alt="make some new friends while you enjoy some casual gaming">Something for Everyone</h3>
+		        			<p title="Justiscraft gamers are Friendly!" alt="talk with someone new">Don't be leftout, connecting with a community is always good times. Join our forum and get introduced :)<a href="#"> Forum</a></p>
+	        			</div></div></div></div></div>
+</body>
+<footer>
+<div id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+					<p title="The alternate Description" alt="make this long, like a story" class="copyright">Open Sourced for a Better tomorrow, tomorrow. - Vikerus</p>
+			</div></div></div></div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('.panel-heading span.clickable').on("click", function (e) {
+            if ($(this).hasClass('panel-collapsed')) {
+                // expand the panel
+                $(this).parents('.panel').find('.panel-body').slideDown();
+                $(this).removeClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+            }
+            else {
+                // collapse the panel
+                $(this).parents('.panel').find('.panel-body').slideUp();
+                $(this).addClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+            }
+        });
+    });
+</script>
+<script>
+<!--
+var x,y,n=0,ny=0,rotINT,rotYINT
+function rotateDIV()
+{
+x=document.getElementById("rotate1")
+clearInterval(rotINT)
+rotINT=setInterval("startRotate()",10)
+}
+function rotateYDIV()
+{
+y=document.getElementById("rotatey1")
+clearInterval(rotYINT)
+rotYINT=setInterval("startYRotate()",10)
+}
+function startRotate()
+{
+n=n+1
+x.style.transform="rotate(" + n + "deg)"
+x.style.webkitTransform="rotate(" + n + "deg)"
+x.style.OTransform="rotate(" + n + "deg)"
+x.style.MozTransform="rotate(" + n + "deg)"
+if (n==180 || n==360)
+	{
+	clearInterval(rotINT)
+	if (n==360){n=0}
+	}
+}
+function startYRotate()
+{
+ny=ny+1
+y.style.transform="rotateY(" + ny + "deg)"
+y.style.webkitTransform="rotateY(" + ny + "deg)"
+y.style.OTransform="rotateY(" + ny + "deg)"
+y.style.MozTransform="rotateY(" + ny + "deg)"
+if (ny==180 || ny>=360)
+	{
+	clearInterval(rotYINT)
+	if (ny>=360){ny=0}
+	}
+}
+//-->
+</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+</footer>
+</html>
