@@ -6,12 +6,12 @@ sec_session_start();
 if(login_check($mysqli) == true) {
 $encryptionMethod = "AES-256-CBC";
 $secretHash = "$hashid_sentfrom";
-$iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CBC);
-$iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
+$iv_size = _get_iv_size(_RIJNDAEL_256, _MODE_CBC);
+$iv =_create_iv($iv_size, _RAND);
 $encryptedMessage = $_SESSION["messagekey"];
 $decryptedMessage = openssl_decrypt($encryptedMessage, $encryptionMethod, $secretHash, 0, $iv);
 $data = $iv.$encryptedMessage;
-$iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CBC);
+$iv_size = _get_iv_size(_RIJNDAEL_256, _MODE_CBC);
 $iv = substr($data, 0, $iv_size);
 $decryptedMessage = openssl_decrypt(substr($data, $iv_size), $encryptionMethod, $secretHash, 0, $iv);
 $_SESSION["pubkey"] = "$decryptedMessage";
