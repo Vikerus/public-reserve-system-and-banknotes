@@ -8,8 +8,8 @@ require_once 'pdo_connect.php';
 	$encryptionMethodE = "AES-256-CBC";
 	$secretHashE = "25c6c7ff35b9979b151f2136cd13b0ee";
 
-	$iv_sizeE = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CBC);
-	$ivE = mcrypt_create_iv($iv_sizeE, MCRYPT_RAND);
+	$iv_sizeE = _get_iv_size(_RIJNDAEL_256, _MODE_CBC);
+	$ivE = _create_iv($iv_sizeE, _RAND);
 
 	$encryptedMessageE = openssl_encrypt($CookieToEncrypt, $encryptionMethodE, $secretHashE, 0, $ivE);
 	
@@ -23,8 +23,8 @@ require_once 'pdo_connect.php';
 	$encryptionMethod5 = "AES-256-CBC";
 	$secretHash5 = "25c6c7ff35b9979b151f2136cd13b0ee";
 
-	$iv_size5 = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CBC);
-	$iv5 = mcrypt_create_iv($iv_size5, MCRYPT_RAND);
+	$iv_size5 = _get_iv_size(__256, _MODE_CBC);
+	$iv5 = _create_iv($iv_size5, _RAND);
 
 	$encryptedMessage5 = openssl_encrypt($CookieToEncrypt5, $encryptionMethod5, $secretHashE, 0, $ivE);
 
