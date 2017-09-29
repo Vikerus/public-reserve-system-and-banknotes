@@ -115,6 +115,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
     }
 	$points = 10;
 	$exp = 1;
+	$email = hash('sha512', $email);
 	$slate = "Welcome to ArchwayME Beta! A new take on community. This is your public blogette!";
 	$userhmac = hash('sha256', $_POST['username']);
         if ($insert_stmt = $mysqli->prepare("INSERT INTO members (friendcode, username, password, salt, ip, UID, email, hashid, httpref, timedate, browser, language, server, slate, points, exp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")) {
