@@ -1,4 +1,4 @@
-<?php
+rank<?php
 //echo "ran, ";
 require_once 'pdo_connect.php';
 require_once 'functions.php';

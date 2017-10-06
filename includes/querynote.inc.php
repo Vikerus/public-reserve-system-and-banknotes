@@ -22,7 +22,7 @@ $query = "SELECT xmlnest FROM hashtable WHERE xmlnest='$hashnote'";
 	$built = hash('sha256', $hashnote);
     }
 echo " ran b $userhmac";
-$query3 = "SELECT userpinhmac, userhandlehash FROM usermasks WHERE userpinhmac='$pinhmac'";
+$query3 = "SELECT userpinhmac, userhandlehash FROM usermask WHERE userpinhmac='$pinhmac'";
   foreach ($dbhi->query($query3) as $row) {
 	$banksig = $row['userpinhmac'];
 	//$usersig = $row['userhandlehash'];

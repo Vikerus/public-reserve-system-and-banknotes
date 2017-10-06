@@ -8,8 +8,8 @@ require_once 'pdo_connect.php';
 	$encryptionMethodE = "AES-256-CBC";
 	$secretHashE = "25c6c7ff35b9979b151f2136cd13b0ee";
 
-	$iv_sizeE = _get_iv_size(_RIJNDAEL_256, _MODE_CBC);
-	$ivE = _create_iv($iv_sizeE, _RAND);
+	$iv_sizeE = MCRYPT_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CBC);
+	$ivE = MCRYPT_create_iv($iv_sizeE, _RAND);
 
 	$encryptedMessageE = openssl_encrypt($CookieToEncrypt, $encryptionMethodE, $secretHashE, 0, $ivE);
 	
@@ -23,13 +23,13 @@ require_once 'pdo_connect.php';
 	$encryptionMethod5 = "AES-256-CBC";
 	$secretHash5 = "25c6c7ff35b9979b151f2136cd13b0ee";
 
-	$iv_size5 = _get_iv_size(__256, _MODE_CBC);
-	$iv5 = _create_iv($iv_size5, _RAND);
+	$iv_size5 = MCRYPT_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CBC);
+	$iv5 = MCRYPT_create_iv($iv_size5, MCRYPT_RAND);
 
 	$encryptedMessage5 = openssl_encrypt($CookieToEncrypt5, $encryptionMethod5, $secretHashE, 0, $ivE);
 
 	$expire = time() + 12600;
-	setcookie("UID",$encryptedMessage5,$expire,"/","archway.io", true);
+	setcookie("UID",$encryptedMessage5,$expire,"/","localhost", true);
 	$UID = $encryptedMessage5;
 	$email = $_POST['email'];
     $count = $dbh->exec("UPDATE members SET UID='$UID'
